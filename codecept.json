@@ -2,7 +2,13 @@
   "tests": "./__tests__/*_test.js",
   "timeout": 10000,
   "output": "./__tests__/codecept_output",
-  "helpers": {},
+  "helpers": {
+    "Nightmare": {
+      "url": "http://localhost:3000",
+      "show": true,
+      "restart": true
+    }
+  },
   "include": {
     "I": "./__tests__/steps_file.js"
   },
