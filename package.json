@@ -3,7 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "jest --coverage --verbose",
     "start": "node ./bin/www"
+  },
+  "jest": {
+    "roots": [
+      "__tests__/unit"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "__tests__/coverage"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
