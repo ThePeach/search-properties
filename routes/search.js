@@ -5,7 +5,7 @@ const router = express.Router()
 
 // GET search page
 router.get('/', function (req, res, next) {
-  res.render('search')
+  res.render('search', {title: 'Search'})
 })
 
 /* POST search. */
@@ -22,6 +22,7 @@ router.post('/', function (req, res, next) {
       // then display "no results" page
       if (typeof error.result_count !== 'undefined' && error.result_count === 0) {
         res.render('search', {
+          title: 'No results found - Search',
           no_results: true
         })
       } else {

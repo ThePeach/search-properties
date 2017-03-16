@@ -10,6 +10,7 @@ router.get('/:keyword', function (req, res, next) {
   listing.search(keyword)
     .then(listings => {
       res.render('results', {
+        title: `Results for ${keyword}`,
         keyword: keyword,
         results: {
           count: listings.result_count
