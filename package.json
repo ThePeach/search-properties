@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "test": "jest --coverage --verbose",
+    "codeceptjs": "codeceptjs",
     "start": "node ./bin/www"
   },
   "jest": {
@@ -26,10 +27,13 @@
     "susy": "^2.2.12"
   },
   "devDependencies": {
+    "codeceptjs": "^0.5.1",
     "eslint": "^3.17.1",
     "eslint-config-standard": "^7.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "nightmare": "^2.10.0",
+    "nightmare-upload": "^0.1.1"
   }
 }

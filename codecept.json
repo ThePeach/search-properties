@@ -1,0 +1,12 @@
+{
+  "tests": "./__tests__/*_test.js",
+  "timeout": 10000,
+  "output": "./__tests__/codecept_output",
+  "helpers": {},
+  "include": {
+    "I": "./__tests__/steps_file.js"
+  },
+  "bootstrap": false,
+  "mocha": {},
+  "name": "test-zoopla"
+}
