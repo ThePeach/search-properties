@@ -1,4 +1,10 @@
-<h1>Search for houses and flats for sale across the UK</h1>
+{{#no_results}}
+  <h1>No results found</h1>
+  <h2>Enter another location and search again</h2>
+{{/no_results}}
+{{^no_results}}
+  <h1>Search for houses and flats for sale across the UK</h1>
+{{/no_results}}
 <form method="POST">
   <label for="keyword">Enter search key</label>
   <input type="text" id="keyword" name="keyword" placeholder="Enter search key">
