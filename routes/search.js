@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
   const keyword = req.body.keyword
 
-  listing.search(keyword)
+  listing.count(keyword)
     .then((result) => {
       // otherwise redirect to results page
       res.redirect(`../results/${keyword}`)
