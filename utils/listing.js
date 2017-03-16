@@ -66,7 +66,15 @@ module.exports = (function () {
         if (err) {
           reject(res)
         } else {
-          resolve(JSON.parse(data))
+          const results = JSON.parse(data)
+
+          if (results.listing) {
+            results.listing.map((entry) => {
+              entry.title = `${entry.num_bedrooms} bed ${entry.property_type.toLowerCase()} for sale`
+              entry.price = entry.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+            })
+          }
+          resolve(results)
         }
       })
     })
