@@ -1,0 +1,14 @@
+.result {
+  &_item {
+    @include container();
+    padding: $space-small;
+
+    @include susy-breakpoint($tablet-up) {
+      padding: $space-medium;
+    }
+
+    @include susy-breakpoint($desktop-up, $susy-desktop) {
+      padding: $space-large;
+    }
+  }
+}

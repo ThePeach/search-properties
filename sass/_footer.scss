@@ -1,0 +1,16 @@
+.main-footer {
+  color: $color-grey-dark;
+  font-size: .6em;
+  text-align: center;
+  padding: 0 $space-small;
+
+  @include susy-breakpoint($tablet-up) {
+    margin-bottom: $space-medium;
+    padding: 0 $space-medium;
+  }
+
+  @include susy-breakpoint($desktop-up, $susy-desktop) {
+    margin-bottom: $space-large;
+    padding: 0 $space-large;
+  }
+}

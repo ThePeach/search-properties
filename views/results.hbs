@@ -1,5 +1,7 @@
 <h1>Results for {{keyword}}</h1>
 <p class="results-count">{{results.count}} results found</p>
-{{#listings}}
-  {{>listing}}
-{{/listings}}
+<ul class="result">
+  {{#listings}}
+    <li class="result_item">{{>listing}}</li>
+  {{/listings}}
+</ul>

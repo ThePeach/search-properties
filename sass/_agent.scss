@@ -1,0 +1,45 @@
+$vertical-margin: .5em;
+
+.agent {
+  padding: 5px;
+  background-color: $color-grey-light;
+  font-size: .8em;
+  color: $color-grey-dark;
+
+  @include susy-breakpoint($tablet-to-desktop) {
+    display: flex;
+    align-items: center;
+  }
+
+  &_logo {
+    @include susy-breakpoint($tablet-to-desktop) {
+      @include span(.5);
+    }
+  }
+
+  &_name {
+    font-weight: normal;
+    font-size: inherit;
+    margin-top: $vertical-margin;
+    margin-bottom: 0;
+
+    @include susy-breakpoint($tablet-to-desktop) {
+      @include span(1);
+      margin-top: 0;
+    }
+  }
+
+  &_address {
+    @include susy-breakpoint($tablet-to-desktop) {
+      @include span(1.5);
+      margin-top: 0;
+    }
+  }
+
+  &_phone {
+    @include susy-breakpoint($tablet-to-desktop) {
+      @include span(last 1);
+      margin-top: 0;
+    }
+  }
+}

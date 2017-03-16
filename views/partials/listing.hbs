@@ -1,12 +1,14 @@
 <article class="listing">
-  <img src="{{image_url}}" title="{{title}}">
-  <h2 class="listing_title">{{title}}</h2>
-  <div class="listing_price">&pound;{{price}}</div>
-  <p class="listing_description">{{{description}}}</p>
+  <img class="listing_image" src="{{image_url}}" title="{{title}}">
+  <div class="listing_info">
+    <h2 class="listing_title">{{title}}</h2>
+    <div class="listing_price">&pound;{{price}}</div>
+    <p class="listing_description">{{{description}}}</p>
+  </div>
   <div class="listing_agent agent">
     <img src="{{agent_logo}}" title="{{agent_name}}" class="agent_logo">
     <h3 class="agent_name">{{agent_name}}</h3>
     <p class="agent_address">{{agent_address}}, {{agent_postcode}}</p>
-    <p class="agent_phone">{{agent_phone}}</p>
+    <p class="agent_phone">T: {{agent_phone}}</p>
   </div>
 </article>

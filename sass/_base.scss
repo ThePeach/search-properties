@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $base-font-size;
+  font-family: $font-family-primary;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-bottom: $space-small;
+  padding: 0 $space-small;
+
+  @include susy-breakpoint($tablet-up) {
+    margin-bottom: $space-medium;
+    padding: 0 $space-medium;
+  }
+
+  @include susy-breakpoint($desktop-up, $susy-desktop) {
+    margin-bottom: $space-large;
+    padding: 0 $space-large;
+  }
+}

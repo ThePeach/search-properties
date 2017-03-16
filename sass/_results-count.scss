@@ -1,0 +1,15 @@
+.results-count {
+  @include container();
+  margin-top: 0;
+  padding: 0 $space-small;
+  color: $color-grey-dark;
+  font-size: .8em;
+
+  @include susy-breakpoint($tablet-up) {
+    padding: 0 $space-medium;
+  }
+
+  @include susy-breakpoint($desktop-up) {
+    padding: 0 $space-large;
+  }
+}

@@ -1,0 +1,19 @@
+// colours
+$color-grey-light: #dedede;
+$color-grey-dark: #5c5c5c;
+$color-highlight: #F53900;
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$font-family-primary: 'Roboto', sans-serif;
+$base-font-size: 16px;
+
+// breakpoints
+$tablet-up: 40em;
+$desktop-up: 80em;
+$tablet-to-desktop: $tablet-up $desktop-up;
+
+// spacings
+$space-small: 16px;
+$space-medium: 24px;
+$space-large: 32px;

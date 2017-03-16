@@ -1,0 +1,54 @@
+.listing {
+  @include span(4);
+
+  &_image {
+    border: 1px solid $color-grey-light;
+    width: 100%;
+
+    @include susy-breakpoint($tablet-up) {
+      @include span(2);
+    }
+
+    @include susy-breakpoint($desktop-up, $susy-desktop) {
+      @include span(2);
+    }
+  }
+
+  &_info {
+    @include susy-breakpoint($tablet-up) {
+      @include span(last 2);
+    }
+
+    @include susy-breakpoint($desktop-up, $susy-desktop) {
+      @include span(2);
+    }
+  }
+
+  &_title {
+    margin: .5em 0;
+    font-weight: normal;
+    font-size: 1.2em;
+  }
+
+  &_price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $color-highlight;
+  }
+
+  &_description {
+    color: $color-grey-dark;
+  }
+
+  &_agent {
+    margin-top: 1em;
+
+    @include susy-breakpoint($tablet-up) {
+      @include span(4);
+    }
+
+    @include susy-breakpoint($desktop-up, $susy-desktop) {
+      @include span(last 1);
+    }
+  }
+}
