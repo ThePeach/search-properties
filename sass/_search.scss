@@ -1,0 +1,56 @@
+.search {
+  @include container();
+  margin-bottom: $space-small;
+  padding: 0 $space-small;
+
+  @include susy-breakpoint($tablet-up) {
+    margin-bottom: $space-medium;
+    padding: 0 $space-medium;
+  }
+
+  @include susy-breakpoint($desktop-up, $susy-desktop) {
+    margin-bottom: $space-large;
+    padding: 0 $space-large;
+  }
+
+  &_label {
+    display: none;
+  }
+
+  &_input {
+    height: 2em;
+    width: 30em;
+
+    @include susy-breakpoint($tablet-down) {
+      @include span(3);
+    }
+  }
+
+  &_submit {
+    height: 2em;
+    background-color: $color-grey-light;
+    border: 1px solid $color-grey-dark;
+
+    @include susy-breakpoint($tablet-down) {
+      @include span(last 1);
+    }
+  }
+
+  &_error {
+    font-size: 1.1em;
+    color: $color-grey-dark;
+    font-weight: normal;
+    margin: $space-small 0;
+    padding: 0 $space-small;
+
+    @include susy-breakpoint($tablet-up) {
+      margin: $space-medium 0;
+      padding: 0 $space-medium;
+    }
+
+    @include susy-breakpoint($desktop-up, $susy-desktop) {
+      margin: $space-large 0;
+      padding: 0 $space-large;
+    }
+  }
+}

@@ -1,12 +1,14 @@
 {{#no_results}}
   <h1>No results found</h1>
-  <h2>Enter another location and search again</h2>
+  <h2 class="search_error">Enter another location and search again</h2>
 {{/no_results}}
 {{^no_results}}
   <h1>Search for houses and flats for sale across the UK</h1>
 {{/no_results}}
-<form method="POST">
-  <label for="keyword">Enter search key</label>
-  <input type="text" id="keyword" name="keyword" placeholder="Enter search key">
-  <input type="submit" value="Search">
-</form>
+<div class="search">
+  <form method="POST">
+    <label for="keyword" class="search_label">Enter search key</label>
+    <input type="text" id="keyword" name="keyword" placeholder="Enter search key" class="search_input">
+    <input type="submit" value="Search" class="search_submit">
+  </form>
+</div>

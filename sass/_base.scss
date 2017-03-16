@@ -17,16 +17,16 @@ p {
 }
 
 h1 {
-  margin-bottom: $space-small;
+  margin: $space-small 0;
   padding: 0 $space-small;
 
   @include susy-breakpoint($tablet-up) {
-    margin-bottom: $space-medium;
+    margin: $space-medium 0;
     padding: 0 $space-medium;
   }
 
   @include susy-breakpoint($desktop-up, $susy-desktop) {
-    margin-bottom: $space-large;
+    margin: $space-large 0;
     padding: 0 $space-large;
   }
 }
