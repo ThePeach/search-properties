@@ -49,6 +49,7 @@
 
     @include susy-breakpoint($desktop-up, $susy-desktop) {
       @include span(last 1);
+      margin-top: 0;
     }
   }
 }
