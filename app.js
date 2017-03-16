@@ -6,6 +6,7 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const hbs = require('hbs')
+const sassMiddleware = require('node-sass-middleware')
 
 const index = require('./routes/index')
 const results = require('./routes/results')
@@ -24,6 +25,14 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(sassMiddleware({
+  src: path.join(__dirname, '/sass'),
+  dest: path.join(__dirname, '/public/stylesheets'),
+  prefix: '/stylesheets',
+  debug: true,
+  outputStyle: 'compressed',
+  includePaths: ['node_modules/susy/sass']
+}))
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
