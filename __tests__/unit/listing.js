@@ -29,6 +29,28 @@ describe('search()', () => {
         expect(result.result_count).toBeGreaterThan(0)
       })
   })
+
+  test('all listing items contain the needed keys', () => {
+    return listing.search('N11')
+      .then(result => {
+        expect(result.listing.length).toBeGreaterThan(0)
+        for (let i = 0; i < result.listing.length; i++) {
+          expect(result.listing[i].num_bedrooms).toBeDefined()
+          expect(result.listing[i].property_type).toBeDefined()
+          expect(result.listing[i].description).toBeDefined()
+          expect(result.listing[i].details_url).toBeDefined()
+          expect(result.listing[i].price).toBeDefined()
+          expect(result.listing[i].image_url).toBeDefined()
+          expect(result.listing[i].agent_name).toBeDefined()
+          expect(result.listing[i].agent_logo).toBeDefined()
+          expect(result.listing[i].agent_phone).toBeDefined()
+          expect(result.listing[i].agent_postcode).toBeDefined()
+          expect(result.listing[i].agent_address).toBeDefined()
+          expect(result.listing[i].title).toBe(`${result.listing[i].num_bedrooms.toLowerCase()} bed ${result.listing[i].property_type.toLowerCase()} for sale`)
+          expect(result.listing[i].price.match(/([0-9]|,)+/)).toBeTruthy()
+        }
+      })
+  })
 })
 
 describe('count()', () => {
