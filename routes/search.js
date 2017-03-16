@@ -1,5 +1,5 @@
 const express = require('express')
-const listing = require('../utils/search')
+const listing = require('../utils/listing')
 
 const router = express.Router()
 
