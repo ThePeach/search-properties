@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-/* GET list of results by postcode */
-router.get('/:postcode', function (req, res, next) {
+/* GET list of results by keyword */
+router.get('/:keyword', function (req, res, next) {
   res.send('respond with the list of results')
 })
 

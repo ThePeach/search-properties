@@ -5,6 +5,7 @@ const path = require('path')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const hbs = require('hbs')
 
 const index = require('./routes/index')
 const results = require('./routes/results')
@@ -15,6 +16,7 @@ const app = express()
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
+hbs.registerPartials(path.join(__dirname, 'views/partials'))
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))

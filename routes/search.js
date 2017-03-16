@@ -1,13 +1,17 @@
 const express = require('express')
 const router = express.Router()
 
-/* POST search. */
-router.post('/', function (req, res, next) {
-  res.send('grab data and redirect to results page')
+// GET search page
+router.get('/', function (req, res, next) {
+  res.render('search')
 })
 
-router.get('/', function (req, res, next) {
-  res.send('respond with the search page')
+/* POST search. */
+router.post('/', function (req, res, next) {
+  // if no results for the current search term
+  // then display "no results" page
+  // otherwise...
+  res.send('grab data and redirect to results page')
 })
 
 module.exports = router
