@@ -1,7 +1,16 @@
 {
   "name": "test-zoopla",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
+  "homepage": "https://github.com/ThePeach/search-properties",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Matteo 'Peach' Pescarin"
+  },
+  "repository": "git@github.com:ThePeach/search-properties.git",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "scripts": {
     "test": "jest --coverage --verbose",
     "codeceptjs": "codeceptjs",
@@ -33,7 +42,6 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
     "jest": "^19.0.2",
-    "nightmare": "^2.10.0",
-    "nightmare-upload": "^0.1.1"
+    "webdriverio": "^4.6.2"
   }
 }
